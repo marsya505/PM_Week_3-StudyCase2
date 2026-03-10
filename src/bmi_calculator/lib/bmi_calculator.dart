@@ -25,3 +25,16 @@ void hitungBMI(double tinggiCm, double beratKg, List<Map<String, dynamic>> riway
     'kategori': kategori
   });
 }
+
+// fungsi untuk menampilkan riwayat menggunakan perulangan (looping)
+void tampilkanRiwayat(List<Map<String, dynamic>> riwayat) {
+  print('\nRIWAYAT PERHITUNGAN BMI');
+  
+  // perulangan untuk mengambil setiap data di dalam list
+  for (var i = 0; i < riwayat.length; i++) {
+    var data = riwayat[i];
+    print('${i + 1}. Tinggi: ${data['tinggi']}cm, Berat: ${data['berat']}kg');
+    print('   Hasil BMI: ${data['bmi']} (${data['kategori']})');
+    print('-------------------------------');
+  }
+}
